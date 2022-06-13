@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1455.0" style="-fx-font-family: Arial" xmlns="http://javafx.com/javafx/11" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.proxima.decryptedkakaodbviewer.MainController">
+   <children>
+       <AnchorPane GridPane.columnSpan="2" GridPane.rowIndex="0">
+           <Button fx:id="btnReload" layoutX="50.0" layoutY="15.0" onMouseClicked="#reload" text="Database reload" />
+           <TextField fx:id="tfQuery" layoutX="200.0" layoutY="15.0" prefWidth="290.0" promptText="Search"/>
+           <Button fx:id="btnSearch" layoutX="500.0" layoutY="15.0" onMouseClicked="#search" text="Search" />
+           <CheckBox fx:id="chkId" layoutX="570.0" layoutY="18.0" text="Id"/>
+           <CheckBox fx:id="chkUser" layoutX="610.0" layoutY="18.0" text="User" />
+           <CheckBox fx:id="chkChatRoom" layoutX="660.0" layoutY="18.0" text="ChatRoom" />
+           <CheckBox fx:id="chkCreatedAt" layoutX="745.0" layoutY="18.0" text="CreatedAt" />
+           <CheckBox fx:id="chkChat" layoutX="825.0" layoutY="18.0" text="Chat" />
+           <CheckBox fx:id="chkAttachment" layoutX="880.0" layoutY="18.0" text="Attachment" />
+       </AnchorPane>
+      <TableView fx:id="tblDb" layoutX="6.0" layoutY="9.0" prefHeight="600.0" prefWidth="1175.0" GridPane.rowIndex="1">
+        <columns>
+            <TableColumn fx:id="colIdx" prefWidth="50.0" sortable="true" text="_Id" />
+            <TableColumn fx:id="colId" prefWidth="150.0" sortable="true" text="Id" />
+            <TableColumn fx:id="colUser" prefWidth="100.0" sortable="true" text="User" />
+            <TableColumn fx:id="colChatRoom" prefWidth="150.0" sortable="true" text="ChatRoom" />
+            <TableColumn fx:id="colCreatedAt" prefWidth="100.0" sortable="true" text="CreatedAt" />
+            <TableColumn fx:id="colChat" prefWidth="300.0" sortable="true" text="Chat" />
+            <TableColumn fx:id="colAttachment" prefWidth="300.0" sortable="true" text="Attachment" />
+        </columns>
+         <GridPane.margin>
+            <Insets bottom="10.0" left="10.0" />
+         </GridPane.margin>
+      </TableView>
+      <GridPane GridPane.columnIndex="1" GridPane.rowIndex="1">
+          <children>
+              <Label text="message" GridPane.rowIndex="0">
+                  <GridPane.margin>
+                      <Insets left="20.0" />
+                  </GridPane.margin>
+              </Label>
+              <TextArea fx:id="taMessage" editable="false" GridPane.rowIndex="1">
+                  <GridPane.margin>
+                      <Insets bottom="10.0" left="10.0" right="10.0" />
+                  </GridPane.margin>
+              </TextArea>
+              <Label text="attachment" GridPane.rowIndex="2">
+                  <GridPane.margin>
+                      <Insets left="20.0" />
+                  </GridPane.margin>
+              </Label>
+              <TextArea fx:id="taAttachment" editable="false" GridPane.rowIndex="3">
+                  <GridPane.margin>
+                      <Insets bottom="10.0" left="10.0" right="10.0" />
+                  </GridPane.margin>
+              </TextArea>
+          </children>
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="280.0" minHeight="10.0" prefHeight="280.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="20.0" minHeight="10.0" prefHeight="20.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="280.0" minHeight="10.0" prefHeight="280.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+   <columnConstraints>
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="1175.0" />
+       <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="280.0" />
+   </columnConstraints>
+   <rowConstraints>
+       <RowConstraints maxHeight="50.0" minHeight="10.0" prefHeight="50.0" vgrow="SOMETIMES" />
+       <RowConstraints minHeight="10.0" prefHeight="600.0" vgrow="SOMETIMES" />
+   </rowConstraints>
+</GridPane>

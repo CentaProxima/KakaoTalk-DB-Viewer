@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.web.WebView?>
+<GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1050.0" style="-fx-font-family: Arial"
+          xmlns="http://javafx.com/javafx/11"
+          xmlns:fx="http://javafx.com/fxml/1"
+          fx:id="paneLogView"
+>
+    <children>
+        <Pane GridPane.columnIndex="0">
+            <Label layoutX="25.0" layoutY="10.0" text="message" />
+            <TextArea fx:id="taMessage" editable="false" layoutX="25.0" layoutY="30.0" prefHeight="250.0" prefWidth="600.0" />
+            <Label layoutX="25.0" layoutY="300.0" text="attachment" />
+            <TextArea fx:id="taAttachment" editable="false" layoutX="25.0" layoutY="320.0" prefHeight="250.0" prefWidth="600.0" />
+        </Pane>
+        <Pane GridPane.columnIndex="1">
+            <Label fx:id="lblChatType" layoutX="25.0" layoutY="20.0" text="ChatType: "/>
+            <Label fx:id="lblCreatedAt" layoutX="25.0" layoutY="40.0" text="CreatedAt: "/>
+            <Button fx:id="btnOpenInBrowser" layoutX="25.0" layoutY="60.0" prefWidth="355.0" text="Open In Browser" textAlignment="CENTER" visible="false" onMouseClicked="#openBrowser"/>
+            <Button fx:id="btnFileDownload" layoutX="25.0" layoutY="60.0" prefWidth="355.0" text="File Download" textAlignment="CENTER" visible="false" onMouseClicked="#clickDownload"/>
+            <Label fx:id="lblDownloadedF" layoutX="25.0" layoutY="90.0" prefWidth="355.0" text=""/>
+            <Label fx:id="lblDownloadedS" layoutX="25.0" layoutY="150.0" prefWidth="355.0" text=""/>
+            <WebView fx:id="imgPhotoOrEmo" layoutX="25.0" layoutY="200.0" prefWidth="355.0" prefHeight="390.0" visible="false"/>
+        </Pane>
+    </children>
+    <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="650.0" />
+    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="400.0" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="600.0" vgrow="SOMETIMES" />
+  </rowConstraints>
+</GridPane>
